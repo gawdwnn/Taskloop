@@ -23,29 +23,46 @@ wheels/
 # Virtual Environment
 venv/
 ENV/
+.env/
+.venv/
+.env/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
 
 # Environment variables
 .env
+.env.*
+!.env.example
 
 # Database
 *.db
 *.sqlite3
+*.sqlite3-journal
 
 # Logs
 *.log
+logs/
 
 # Coverage
 .coverage
 htmlcov/
+.coverage.*
 
-# Misc
-.DS_Store
+# Testing
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Local development
+local_settings.py
+db.sqlite3
 
 # Docker
 **/docker-compose.override.yml
@@ -64,7 +81,70 @@ htmlcov/
 
 # System
 Thumbs.db
-ehthumbs.db 
+ehthumbs.db
+.DS_Store
 
+# Development tools
 .cursor/
+.windsurf/
 .cursorignore
+
+# Documentation
+docs/_build/
+
+# Local development
+*.local
+
+# Alembic
+# Only ignore Python cache files, not the actual migration files
+!/alembic/versions/*.py
+/alembic/__pycache__/
+/alembic/versions/__pycache__/
+
+# Local development
+local_settings.py
+
+# PyCharm
+.idea/
+.idea/*
+!.idea/modules.xml
+!.idea/vcs.xml
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Python specific
+*.pyc
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+ENV/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
